@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-dark-brown: #46211A;
+    --color-rust-red: #A43820;
+    --color-light-beige: #F1D3B2;
+    --color-dark-rust: #8B2D16;
+    --color-white: #FFFFFF;
+  }
+
+  html, body {
+    @apply h-full w-full m-0 p-0;
+    background-color: var(--color-light-beige);
+    color: var(--color-dark-brown);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  #app {
+    @apply h-full w-full min-h-screen;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-lg font-medium transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-[#A43820] text-[#F1D3B2] hover:bg-[#8B2D16];
+  }
+
+  .btn-secondary {
+    @apply bg-[#F1D3B2] text-[#46211A] border-2 border-[#A43820] hover:bg-[#A43820] hover:text-[#F1D3B2];
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-200 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .badge {
+    @apply px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .badge-primary {
+    @apply bg-[#F1D3B2] text-[#A43820];
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-12;
+  }
+
+  .section-title {
+    @apply text-4xl font-bold mb-4 text-center text-[#46211A];
+  }
+
+  .section-subtitle {
+    @apply text-xl mb-8 text-center max-w-2xl mx-auto text-[#A43820];
+  }
+}
+
+/* Remove all other styles as they conflict with Tailwind */
